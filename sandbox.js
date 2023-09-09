@@ -8,12 +8,9 @@ function updateDayOfTheWeek() {
 
 function updateUTCTime() {
     const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
-    const now = new Date();
+    const now = new Date().getTime();
 
-    const numericalTime = now.toISOString().substr(11, 8);
-
-    const formattedTime = `${numericalTime}`;
-    timeElement.textContent = formattedTime;
+    timeElement.textContent =now;
 }
 
 updateDayOfTheWeek();
